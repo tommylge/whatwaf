@@ -1,0 +1,3 @@
+beautifulsoup4 >= 4.6.3
+requests >= 2.20.0
+scrapy==2.10.1
