@@ -1,4 +1,4 @@
-VERSION = "0.0.1"
+VERSION = "0.0.2"
 
 # name provided to unknown firewalls
 UNKNOWN_FIREWALL_NAME = "unknown"

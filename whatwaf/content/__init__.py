@@ -4,6 +4,7 @@ from . import plugins
 
 import whatwaf.lib.formatter as formatter
 import whatwaf.lib.settings as settings
+import whatwaf.lib.timeout as timeout
 
 from types import ModuleType
 
@@ -14,6 +15,7 @@ class ScriptQueue(object):
     This is where we will load all the scripts that we need to identify the firewall
     or to identify the possible bypass
     """
+
     skip_schema = ("__init__.py", ".pyc", "__")
 
     def load_scripts(self):
@@ -39,6 +41,7 @@ class ScriptQueue(object):
         return retval
 
 
+@timeout.timeout(seconds=5)
 def detection_main(response):
     """
     main detection function
